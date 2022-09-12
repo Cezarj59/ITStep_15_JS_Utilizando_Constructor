@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Veicúlos</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<style>
+    label {
+        text-align: right;
+    }
+
+    .row {
+        margin-top: 0.5rem;
+    }
+
+    legend {
+        text-align: center;
+    }
+
+    fieldset {
+        background-color: #E8E8E5;
+        color: #000;
+        padding: 1rem;
+    }
+
+    #localCards {
+        justify-content: space-evenly;
+    }
+
+    .card {
+        margin: 0.2rem;
+        padding: 0.3rem;
+        box-sizing: border-box;
+        background-color: #E8E8E5;
+        border: #000 solid 2px;
+    }
+
+    .cardMoto {
+        background-color: blue;
+        color: #fff;
+    }
+
+    .cardCarro {
+        background-color: red;
+        color: #fff;
+    }
+    .erro{
+        border: red 2px solid;
+        color: red;
+    }
+</style>
+
+<body>
+
+    <div class="container">
+        <form class="row" id="form-cadastro">
+            <fieldset>
+
+                <!-- Form Name -->
+                <legend>Registro de Veículos.</legend>
+
+                <!-- Select Basic -->
+                <div class="row">
+                    <label class="col-md-4 control-label" for="selectbasic">Tipo de Veiculo</label>
+                    <div class="col-md-4">
+                        <select id="selectVeiculo" name="selectbasic" class="form-control">
+                            <option value="Carro">Carro</option>
+                            <option value="Moto">Moto</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="row">
+                    <label class="col-md-4 control-label" for="fabricanteInput">Fabricante</label>
+                    <div class="col-md-4">
+                        <input id="fabricanteInput" name="fabricanteInput" type="text" placeholder="ex: Volkswagen"
+                            class="form-control input-md">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="row">
+                    <label class="col-md-4 control-label" for="modeloInput">Modelo</label>
+                    <div class="col-md-4">
+                        <input id="modeloInput" name="modeloInput" type="text" placeholder="ex: Gol"
+                            class="form-control input-md">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="row">
+                    <label class="col-md-4 control-label" for="placaInput">Placa</label>
+                    <div class="col-md-4">
+                        <input id="placaInput" name="placaInput" type="text" placeholder="Digite a placa do veicúlo..."
+                            class="form-control input-md">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="row">
+                    <label class="col-md-4 control-label" for="corInput">Cor</label>
+                    <div class="col-md-4">
+                        <input id="corInput" name="corInput" type="text" placeholder="ex: Prata"
+                            class="form-control input-md">
+
+                    </div>
+                </div>
+
+                <!-- Button -->
+                <div class="row">
+                    <label class="col-md-4 control-label" for="buttonR"></label>
+                    <div class="col-md-4">
+                        <button id="buttonR" name="buttonR" class="btn btn-success" onclick="cadastrar()"
+                            type="button">Registrar</button>
+                    </div>
+                </div>
+
+            </fieldset>
+        </form>
+        <div id="localCards" class="row">
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="./js/script.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
